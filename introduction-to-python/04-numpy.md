@@ -1,6 +1,6 @@
 
 
-# 04 – NumPy Arrays and Basic Statistics
+# NumPy Arrays and Basic Statistics
 
 ## 1. Why plain Python lists are not enough
 
