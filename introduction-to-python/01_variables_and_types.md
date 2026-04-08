@@ -1,22 +1,20 @@
 # Variables and Data Types in Python
 
-## 1\. What is a variable?
+## 1. What is a variable?
 
 A **variable** is a named box where you store a value so you can reuse it later.
 
-* You create a variable with the `=` sign.
-* Python remembers the value under the given name.
-* When you type the name, Python gives you the stored value.
+- You create a variable with the `=` sign.
+- Python remembers the value under the given name.
+- When you type the name, Python gives you the stored value.
 
 ```python
 height = 1.79      # in meters (float)
 weight = 68.7      # in kilograms (float)
 
-bmi = weight / height \*\* 2
+bmi = weight / height ** 2
 bmi
 ```
-
-
 
 ### Why variables are useful (reproducibility)
 
@@ -24,44 +22,40 @@ If you change the value in **one place**, all calculations that use this variabl
 
 ```python
 weight = 72.0      # updated weight
-bmi = weight / height \*\* 2
+bmi = weight / height ** 2
 bmi
 ```
 
 This is powerful, because you can:
 
-* update inputs once,
-* rerun the code,
-* get new results without editing every line.
-
-
+- update inputs once,
+- rerun the code,
+- get new results without editing every line.
 
 ### Naming rules (short version)
 
-* Names are **case‑sensitive**: `Height` and `height` are two different variables.
-* Use letters, digits and `\_` (underscore), but **do not** start with a digit.
-* Good style: use lowercase with underscores, e.g. `body\_mass\_index`, `user\_age`.
+- Names are **case‑sensitive**: `Height` and `height` are two different variables.
+- Use letters, digits and `_` (underscore), but **do not** start with a digit.
+- Good style: use lowercase with underscores, e.g. `body_mass_index`, `user_age`.
 
 ```python
 userAge = 25      # works, but not recommended
-user\_age = 25     # recommended (snake\_case)
+user_age = 25     # recommended (snake_case)
 ```
 
+---
 
+## 2. Basic data types in Python
 
-
-
-## 2\. Basic data types in Python
-
-Every value in Python has a **type**.
+Every value in Python has a **type**.  
 The type defines how the value is stored and how operators (like `+`) behave with it.
 
 We will focus on 4 core types:
 
-* `int`  – integer (whole number)
-* `float` – floating‑point number (decimal)
-* `str` – string (text)
-* `bool` – boolean (True/False)
+- `int`  – integer (whole number)
+- `float` – floating‑point number (decimal)
+- `str` – string (text)
+- `bool` – boolean (True/False)
 
 You can always check the type with `type(value)`.
 
@@ -72,11 +66,7 @@ type("Python")    # str
 type(True)        # bool
 ```
 
-
-
-
-
-## 2.1. Integers – `int`
+### 2.1. Integers – `int`
 
 **Idea:** whole numbers, without decimal part.
 
@@ -85,7 +75,7 @@ Examples:
 ```python
 age = 25
 year = 2026
-temperature\_change = -3
+temperature_change = -3
 
 type(age)      # int
 ```
@@ -93,16 +83,14 @@ type(age)      # int
 Typical operations:
 
 ```python
-10 + 5     # 15
-10 - 5     # 5
-10 \* 5     # 50
-10 // 3    # 3  (integer division)
-10 % 3     # 1  (remainder)
+10 + 5      # 15
+10 - 5      # 5
+10 * 5      # 50
+10 // 3     # 3  (integer division)
+10 % 3      # 1  (remainder)
 ```
 
-## 
-
-## 2.2. Floating‑point numbers – `float`
+### 2.2. Floating‑point numbers – `float`
 
 **Idea:** real numbers with a decimal point.
 
@@ -119,82 +107,72 @@ type(height)   # float
 Typical operations (same as for `int`, but with decimals):
 
 ```python
-bmi = weight / height \*\* 2
+bmi = weight / height ** 2
 bmi
 ```
 
-
-
-
-
-## 2.3. Strings – `str`
+### 2.3. Strings – `str`
 
 **Idea:** text, anything inside quotes.
 
 You can use single or double quotes:
 
 ```python
-first\_name = "John"
-last\_name = 'Doe'
+first_name = "John"
+last_name = 'Doe'
 language = "Python"
 
-type(first\_name)   # str
+type(first_name)   # str
 ```
 
 String operations:
 
 ```python
-full\_name = first\_name + " " + last\_name   # concatenation
-greeting = "Hello " \* 3                    # repetition
+full_name = first_name + " " + last_name   # concatenation
+greeting = "Hello " * 3                    # repetition
 ```
 
 Accessing characters (indexing starts from 0):
 
 ```python
-language\[0]   # 'P'
-language\[1]   # 'y'
+language   # 'P'
+language   # 'y'
 ```
 
-
-
-
-
-## 2.4. Booleans – `bool`
+### 2.4. Booleans – `bool`
 
 **Idea:** logical value – only `True` or `False`.
 
 Booleans often come from comparisons:
 
 ```python
-is\_student = True
-is\_adult = age >= 18          # True if age is 18 or more
+is_student = True
+is_adult = age >= 18          # True if age is 18 or more
 
-type(is\_student)              # bool
+type(is_student)              # bool
 ```
 
 Comparison examples:
 
 ```python
-5 > 3         # True
-5 < 3         # False
-5 == 5        # True
-5 != 5        # False
+5 > 3          # True
+5 < 3          # False
+5 == 5         # True
+5 != 5         # False
 ```
 
 Booleans are also used with logical operators:
 
 ```python
-has\_ticket = True
-has\_id = False
+has_ticket = True
+has_id = False
 
-can\_enter = has\_ticket and has\_id   # False
+can_enter = has_ticket and has_id   # False
 ```
 
+---
 
-
-
-
-## 3\. Operator `+` depends on the type
+## 3. Operator `+` depends on the type
 
 The `+` operator behaves **differently** depending on the data type.
 
@@ -207,8 +185,6 @@ For numbers, `+` means **addition**.
 1.5 + 2.5    # 4.0
 ```
 
-
-
 ### Strings (`str`)
 
 For strings, `+` means **concatenation** (joining text).
@@ -216,8 +192,6 @@ For strings, `+` means **concatenation** (joining text).
 ```python
 "Hello" + " " + "World"   # 'Hello World'
 ```
-
-
 
 ### Mixing types – common error
 
@@ -236,34 +210,30 @@ message = "Your age is " + str(age)
 message    # 'Your age is 25'
 ```
 
+---
 
-
-
-
-## 4\. Converting between types (casting)
+## 4. Converting between types (casting)
 
 Sometimes you need to change the type of a value.
 
 ### Number ↔ number
 
 ```python
-x = 5           # int
-float\_x = float(x)    # 5.0
+x = 5               # int
+float_x = float(x)  # 5.0
 
 y = 3.9
-int\_y = int(y)        # 3  (decimals are cut off, not rounded)
+int_y = int(y)      # 3  (decimals are cut off, not rounded)
 ```
-
-
 
 ### String ↔ number
 
 ```python
-age\_str = "30"
-age\_int = int(age\_str)      # 30
+age_str = "30"
+age_int = int(age_str)        # 30
 
-height\_str = "1.79"
-height\_float = float(height\_str)   # 1.79
+height_str = "1.79"
+height_float = float(height_str)   # 1.79
 ```
 
 If the string is not a valid number, conversion fails:
@@ -272,11 +242,9 @@ If the string is not a valid number, conversion fails:
 int("abc")   # ValueError
 ```
 
+---
 
-
-
-
-## 5\. Small practice examples
+## 5. Small practice examples
 
 You can use these as mini‑exercises or test cells.
 
@@ -286,34 +254,27 @@ You can use these as mini‑exercises or test cells.
 height = 1.79
 weight = 68.7
 
-bmi = weight / height \*\* 2
+bmi = weight / height ** 2
 bmi
 ```
-
-
 
 ### 5.2. Simple profile
 
 ```python
 name = "Alice"
 age = 28
-is\_student = False
+is_student = False
 
 profile = name + " is " + str(age) + " years old."
 profile
 ```
 
-
-
 ### 5.3. Temperature check
 
 ```python
 temperature = 22.5
-is\_hot = temperature > 25
+is_hot = temperature > 25
 
-is\_hot
-type(is\_hot)
+is_hot
+type(is_hot)
 ```
-
-
-
