@@ -204,6 +204,4 @@ for k, v in {"a": 1, "b": 2}.items():
     print(k, v)
 ```
 
-## Final takeaway
-**Loops help you automate repetition**.
-For beginner-friendly Python, the most important thing is to understand **when to use `while` and when to use `for`**, and then learn the most common iteration tools for dictionaries, NumPy, and Pandas.
+
