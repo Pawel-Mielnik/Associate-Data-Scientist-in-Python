@@ -173,6 +173,3 @@ Use this simple way to remember the topic:
 - **Distribution** means looking at the pattern of all results.
 - **Hacker Statistics** means estimating probability through repeated experiments.
 
-## Final takeaway
-**Hacker Statistics is about learning probability by simulation**.
-Instead of solving everything with equations, you model the random process in code, run it many times, and use the results to estimate what is likely to happen.
